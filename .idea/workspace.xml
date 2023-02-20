@@ -1,55 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="09b4dc77-a99d-40bd-b651-5e3347228097" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/company/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phone_number/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/migrations/0002_alter_subscriptionplan_company.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscription_plan/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phone_number/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phone_number/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phone_number/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/phone_number/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription_plan/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscription_plan/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscription_plan/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscription_plan/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +22,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Ly0lhm1KVgulJ0Ba7NuYYRObXD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="runserver" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Try_3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="base.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Ayan\.virtualenvs\Try_3-OG0mp2q3\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Pipenv (Try_3)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,6 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1676828171028</updated>
       <workItem from="1676828172325" duration="63000" />
+      <workItem from="1676828257888" duration="4670000" />
+      <workItem from="1676880785931" duration="13903000" />
     </task>
     <servers />
   </component>
