@@ -9,3 +9,7 @@ PyJWT==2.6.0
 pytz==2022.7.1
 sqlparse==0.4.3
 tzdata==2022.7
+
+celery~=5.2.7
+stripe~=5.2.0
+twilio~=7.16.4

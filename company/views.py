@@ -10,7 +10,7 @@ from django.contrib.auth.hashers import make_password
 
 from company.models import Company
 from company.serializers import CompanySerializer, CompanySerializerWithToken, UserSerializer, \
-    CompanySubscriptionSerializer
+    CompanySubscriptionSerializer, CompanyPhoneNumberSerializer
 from django.contrib.auth import get_user_model, authenticate
 
 from subscription_plan.models import SubscriptionPlan
@@ -107,36 +107,23 @@ class LoginView(APIView):
             return Response({'error': 'Invalid username or password'}, status=status.HTTP_401_UNAUTHORIZED)
 
         # Get the associated company
-        company = Company.objects.get(user=user)
+        company = Company.objects.get(user=user, many=False)
 
         # Serialize the company data with a JWT token
         serializer = CompanySerializerWithToken(company)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def get(self, request):
-        q = User.objects.all()
-        userSerializer = UserSerializer(q, many=True)
-        t = Company.objects.all()
-        companySerializer = CompanySerializer(t, many=True)
-        return Response(
-            {
-                'user_data': userSerializer.data,
-                'company_data': companySerializer.data
-            }
-        )
 
-
+permission_classes([IsAdminUser])
 class CompanySubscriptionList(APIView):
     def get_object(self, user):
         try:
             company = Company.objects.get(user=user)
-            print("found")
             return company
         except Company.DoesNotExist:
             raise Http404('Company does not exist')
 
 
-    permission_classes([IsAdminUser])
     def get(self, request, format=None):
         company = self.get_object(request.user)
         serializer = CompanySubscriptionSerializer(company)
@@ -146,3 +133,46 @@ class CompanySubscriptionList(APIView):
             },
             status=status.HTTP_200_OK
         )
+
+
+permission_classes([IsAdminUser])
+class CompanyPhoneNumberList(APIView):
+    def get_object(self, user):
+        try:
+            company = Company.objects.get(user=user)
+            return company
+        except Company.DoesNotExist:
+            raise Http404('Company does not exist')
+
+    def get(self, request, format=None):
+        company = self.get_object(request.user)
+        serializer = CompanyPhoneNumberSerializer(company)
+        return Response(
+            {
+                'data': serializer.data
+            },
+            status=status.HTTP_200_OK
+        )
+
+
+
+permission_classes([IsAdminUser])
+class ALlCompanyList(APIView):
+    def get(self, request):
+        user = request.user
+        if user.is_superuser:
+            q = User.objects.all()
+            userSerializer = UserSerializer(q, many=True)
+            t = Company.objects.all()
+            companySerializer = CompanySerializer(t, many=True)
+            return Response(
+                {
+                    'user_data': userSerializer.data,
+                    'company_data': companySerializer.data
+                }
+            )
+        else:
+            return Response(
+                {
+                    'message': 'Not valid user'
+                }, status=status.HTTP_400_BAD_REQUEST)

@@ -11,7 +11,7 @@ class PhoneNumberSerializer(serializers.ModelSerializer):
 class SecondaryPhoneNumbersSerializer(serializers.ModelSerializer):
     class Meta:
         model = PhoneNumber
-        fields = ['is_active']
+        exclude = ['company']
 
 
 class EditPhoneNumbersSerializer(serializers.ModelSerializer):

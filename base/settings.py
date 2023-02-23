@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from datetime import timedelta
 from pathlib import Path
 
+from celery.schedules import crontab
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -26,7 +27,6 @@ SECRET_KEY = 'django-insecure-yo6a0u21o!xcei+0y^kh1tmx)hqu_#5r(kqd@4*z4svadvx@z9
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -75,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'base.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -85,7 +84,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -105,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -116,7 +113,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -168,3 +164,40 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dev.test.lock@gmail.com'
+EMAIL_HOST_PASSWORD = 'fwgpnybucccccmev'
+EMAIL_USE_TLS = True
+
+
+# Twilio configuration
+TWILIO_ACCOUNT_SID = 'AC7a7df46d43582140255a5320dc7cd21b'
+TWILIO_AUTH_TOKEN = '636497480c242ad9eb255c71c95bb9d0'
+TWILIO_PHONE_NUMBER = '+19804095842'
+
+# Stripe configuration
+STRIPE_SECRET_KEY = 'your_stripe_secret_key'
+STRIPE_PUBLISHABLE_KEY = 'your_stripe_publishable_key'
+
+
+# Celery configuration
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TIMEZONE = 'Asia/Dhaka'
+
+# Schedule a task to run every 30 days
+CELERY_BEAT_SCHEDULE = {
+    'check-phone-number-payment-status': {
+        'task': 'check_payment_status',
+        'schedule': crontab(day_of_month='*/30'),
+    },
+}
+
+
+

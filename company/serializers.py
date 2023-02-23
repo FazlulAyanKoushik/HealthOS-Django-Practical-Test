@@ -1,10 +1,12 @@
 from rest_framework import serializers
 
-from subscription_plan.models import SubscriptionPlan
-from subscription_plan.serializers import SubscriptionPlanSerializer, SecondarySubscriptionsSerializer
-from .models import Company
+from phone_number.serializers import SecondaryPhoneNumbersSerializer
+from subscription_plan.serializers import SecondarySubscriptionsSerializer
+
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
+
+from .models import Company
 
 User = get_user_model()
 
@@ -68,3 +70,11 @@ class CompanySubscriptionSerializer(CompanySerializer):
     class Meta:
         model = Company
         fields = ['id', 'username', 'company_name', 'email', 'isAdmin', 'subscription_plans']
+
+
+class CompanyPhoneNumberSerializer(CompanySerializer):
+    phone_numbers = SecondaryPhoneNumbersSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Company
+        fields = ['id', 'username', 'company_name', 'email', 'isAdmin', 'phone_numbers']

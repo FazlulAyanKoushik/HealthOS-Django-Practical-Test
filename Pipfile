@@ -16,6 +16,8 @@ pyjwt = "==2.6.0"
 pytz = "==2022.7.1"
 sqlparse = "==0.4.3"
 tzdata = "==2022.7"
+twilio = "*"
+celery = "*"
 
 [dev-packages]
 

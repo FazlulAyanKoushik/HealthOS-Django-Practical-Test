@@ -17,6 +17,7 @@ class PhoneNumber(models.Model):
     is_active = models.BooleanField(default=False)
     is_paid = models.BooleanField(default=False)
     is_primary = models.BooleanField(default=False)
+    otp = models.CharField(max_length=10, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
 

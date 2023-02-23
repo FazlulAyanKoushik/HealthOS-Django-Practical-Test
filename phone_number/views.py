@@ -6,12 +6,13 @@ from rest_framework import status
 from rest_framework.views import APIView
 
 from phone_number.models import PhoneNumber
-from phone_number.serializers import PhoneNumberSerializer, SecondaryPhoneNumbersSerializer
+from phone_number.serializers import PhoneNumberSerializer, EditPhoneNumbersSerializer
 from company.models import Company
 
 
 
 permission_classes([IsAdminUser])
+
 class PhoneNumberListView(APIView):
     def get_object(self, user):
         try:
@@ -79,6 +80,7 @@ class PhoneNumberListView(APIView):
 
 
 permission_classes([IsAdminUser])
+
 class PhoneNumberDetailView(APIView):
     # Retrieve a Company object based on the user.
     def get_object(self, user):
@@ -120,7 +122,7 @@ class PhoneNumberDetailView(APIView):
         phone_number = self.get_phone_number(pk)
 
         if phone_number.company == company:
-            serializer = SecondaryPhoneNumbersSerializer(phone_number, data=request.data)
+            serializer = EditPhoneNumbersSerializer(phone_number, data=request.data)
             if serializer.is_valid():
                 serializer.save()
                 serializer = PhoneNumberSerializer(phone_number, many=False)
@@ -144,5 +146,3 @@ class PhoneNumberDetailView(APIView):
         return Response({
             'message': 'Not valid user'
         }, status=status.HTTP_400_BAD_REQUEST)
-
-
