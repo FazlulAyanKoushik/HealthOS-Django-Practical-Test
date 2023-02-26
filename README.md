@@ -1,4 +1,4 @@
-#HealthOS | Django Practical Test
+## HealthOS | Django Practical Test
 
 A Django app to track enterprise customers who pay a monthly subscription for a phone and data plan.
 
@@ -7,12 +7,9 @@ A Django app to track enterprise customers who pay a monthly subscription for a 
 ## Features
 
 - User authentication and authorization using simple-jwt-token
-- Product management with the ability to add, update, and delete products
-- Order management with the ability to view, update, and delete orders
-- Checkout and payment processing using paypal
-- Inventory management with the ability to view and update product stock levels
-- Admin dashboard with statistics and insights into website activity
-
+- OTP processing using Twilio
+- Payment processing using Stripe
+- Automatic payment schedule processing using celery
 
 
 ## Getting Started

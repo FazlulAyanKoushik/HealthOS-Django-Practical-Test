@@ -173,9 +173,9 @@ EMAIL_USE_TLS = True
 
 
 # Twilio configuration
-TWILIO_ACCOUNT_SID = 'AC7a7df46d43582140255a5320dc7cd21b'
-TWILIO_AUTH_TOKEN = '636497480c242ad9eb255c71c95bb9d0'
-TWILIO_PHONE_NUMBER = '+19804095842'
+TWILIO_ACCOUNT_SID = 'your_twilio_sid'
+TWILIO_AUTH_TOKEN = 'your_twilio_token'
+TWILIO_PHONE_NUMBER = '+your_twilio_number'
 
 # Stripe configuration
 STRIPE_SECRET_KEY = 'your_stripe_secret_key'
