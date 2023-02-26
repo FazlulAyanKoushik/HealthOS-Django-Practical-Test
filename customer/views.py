@@ -208,7 +208,7 @@ def ChargeSubscription(phone_number, subscription_plan, stripeToken):
             source=stripeToken
         )
 
-        phone_number.customer.stripe_customer_id = customer.id
+        phone_number.stripe_customer_id = customer.id
         phone_number.save()
 
         # Charge the customer using the subscription plan's price
@@ -287,11 +287,11 @@ def check_payment_status():
     # Check payment status for each phone number
     for phone_number in phone_numbers:
 
-        if phone_number.is_paid == False:
+        if not phone_number.is_paid:
 
             try:
                 stripe.Charge.create(
-                    customer=phone_number.customer.stripe_customer_id,
+                    customer=phone_number.stripe_customer_id,
                     # convert the price from its base currency unit to the smallest currency unit
                     amount=int(phone_number.subscription.price * 100),
                     currency='BDT',
@@ -302,8 +302,7 @@ def check_payment_status():
                 phone_number.save()
             except Exception as e:
 
-            # Charge the customer using Stripe or other payment gateway
-            # Update the payment status in the database
+                # If subscription plan is unpaid then Company owns the phone number
                 phone_number.is_active = False
                 phone_number.customer = None
                 phone_number.save()

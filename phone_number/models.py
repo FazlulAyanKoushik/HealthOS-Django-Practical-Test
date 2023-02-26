@@ -14,6 +14,7 @@ class PhoneNumber(models.Model):
                                      on_delete=models.SET_NULL,
                                      null=True,
                                      related_name='phone_numbers')
+    stripe_customer_id = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=False)
     is_paid = models.BooleanField(default=False)
     is_primary = models.BooleanField(default=False)

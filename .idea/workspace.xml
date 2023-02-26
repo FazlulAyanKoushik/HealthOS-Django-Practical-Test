@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09b4dc77-a99d-40bd-b651-5e3347228097" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Try_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Try_3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/company/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/company/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/company/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phone_number/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/phone_number/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_number/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/phone_number/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_number/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/phone_number/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +29,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="runserver" type="Python.DjangoServer" factoryName="Django server">
       <module name="Try_3" />
@@ -98,7 +81,8 @@
       <workItem from="1676828257888" duration="4670000" />
       <workItem from="1676880785931" duration="15075000" />
       <workItem from="1677053998158" duration="1143000" />
-      <workItem from="1677070608786" duration="23055000" />
+      <workItem from="1677070608786" duration="23751000" />
+      <workItem from="1677422435254" duration="960000" />
     </task>
     <servers />
   </component>
