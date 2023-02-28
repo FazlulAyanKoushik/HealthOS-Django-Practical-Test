@@ -1,7 +1,7 @@
 
 from rest_framework.response import Response
 from rest_framework.decorators import permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from rest_framework import status
 from rest_framework.views import APIView
@@ -184,3 +184,44 @@ class ApplyPhoneNumberSubscriptionPlan(APIView):
             return Response({
                 'message': 'Subscription not found or not active'
             }, status=status.HTTP_400_BAD_REQUEST)
+
+
+permission_classes([IsAdminUser])
+class GetCustomerView(APIView):
+    def get_object(self, user):
+        try:
+            company = Company.objects.get(user=user)
+            return company
+        except Company.DoesNotExist:
+            raise Http404('Company does not exist')
+    def get(self, request, format=None):
+        company = self.get_object(request.user)
+        phone_number = request.data.get('phone_number')
+
+        try:
+            phone_number = PhoneNumber.objects.get(company=company, number=phone_number)
+        except:
+            return Response(
+                {
+                    'message': 'Phone number not exists'
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if phone_number.customer is None:
+            return Response(
+                {
+                    'message': 'There is no customer available'
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        customer_phone_numbers = phone_number.customer.phone_numbers.filter(company=company)
+        serializer = PhoneNumberSerializer(customer_phone_numbers)
+
+        return Response({
+            'id': phone_number.customer.user.id,
+            'email': phone_number.customer.user.email,
+            'name': phone_number.customer.name,
+            'phone_numbers': serializer.data
+        }, status=status.HTTP_200_OK)

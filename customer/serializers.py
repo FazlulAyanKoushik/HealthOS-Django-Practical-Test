@@ -7,6 +7,8 @@ from subscription_plan.serializers import SubscriptionPlanSerializer, SecondaryS
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 
+from phone_number.serializers import PhoneNumberSerializer
+
 User = get_user_model()
 
 
@@ -20,10 +22,11 @@ class CustomerSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     email = serializers.EmailField(source='user.email', read_only=True)
     isAdmin = serializers.EmailField(source='user.is_staff', read_only=True)
+    phone_numbers = PhoneNumberSerializer(many=True, read_only=True)
 
     class Meta:
         model = Customer
-        fields = ['id', 'username', 'name', 'email', 'isAdmin']
+        fields = ['id', 'username', 'name', 'email', 'isAdmin', 'phone_numbers']
 
 
 class CustomerSerializerWithToken(CustomerSerializer):

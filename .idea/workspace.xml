@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="09b4dc77-a99d-40bd-b651-5e3347228097" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/utilities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +41,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -82,7 +86,10 @@
       <workItem from="1677053998158" duration="1143000" />
       <workItem from="1677070608786" duration="23751000" />
       <workItem from="1677422435254" duration="3562000" />
-      <workItem from="1677583816684" duration="357000" />
+      <workItem from="1677583816684" duration="1457000" />
+      <workItem from="1677585292048" duration="68000" />
+      <workItem from="1677585370477" duration="212000" />
+      <workItem from="1677585681133" duration="1781000" />
     </task>
     <servers />
   </component>
